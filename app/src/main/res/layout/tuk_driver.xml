@@ -9,41 +9,44 @@
 
     <ScrollView
         android:id="@+id/scrollView5"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/navigation_bar_container"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:fillViewport="true"> <!-- Important for nested ConstraintLayout to behave well with scrolling -->
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/inner_constraint_layout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp"> <!-- Add padding for scroll space -->
 
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="122dp"
                 android:layout_marginTop="16dp"
-                android:layout_marginEnd="123dp"
-                android:layout_marginBottom="10dp"
                 android:fontFamily="sans-serif-black"
                 android:text="Tuk Drivers"
                 android:textAlignment="center"
                 android:textSize="30sp"
-                app:layout_constraintBottom_toTopOf="@+id/searchView"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <SearchView
                 android:id="@+id/searchView"
-                android:layout_width="350dp"
+                android:layout_width="0dp"
                 android:layout_height="50dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="31dp"
-                android:layout_marginBottom="9dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
                 android:background="#FDFDFD"
                 android:backgroundTint="#FFFFFF"
-                app:layout_constraintBottom_toTopOf="@+id/textView5"
+                app:iconifiedByDefault="false"
+                app:queryHint="Search drivers by name or location"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView3" />
@@ -54,74 +57,56 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="24dp"
-                android:layout_marginEnd="239dp"
                 android:text="Top Rated Drivers"
                 android:textSize="20sp"
                 android:textStyle="bold|italic"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/searchView" />
 
-            <LinearLayout
-                android:id="@+id/linearLayout"
-                android:layout_width="377dp"
-                android:layout_height="201dp"
-                android:background="#FFFFFF"
-                android:orientation="horizontal"
-                tools:layout_editor_absoluteX="18dp"
-                tools:layout_editor_absoluteY="188dp">
+            <!-- Card 1 Placeholder -->
+            <include
+                android:id="@+id/driverCard1"
+                layout="@layout/content_card1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/textView5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
 
-                <ImageView
-                    android:id="@+id/imageView6"
-                    android:layout_width="142dp"
-                    android:layout_height="150dp"
-                    android:layout_gravity="center"
-                    android:paddingLeft="10dp"
-                    android:paddingRight="10dp"
-                    app:srcCompat="@drawable/image_3" />
+            <!-- Card 2 Placeholder -->
+            <include
+                android:id="@+id/driverCard2"
+                layout="@layout/content_card1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/driverCard1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
+            <!-- Card 3 Placeholder -->
+            <include
+                android:id="@+id/driverCard3"
+                layout="@layout/content_card1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/driverCard2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
 
-                    <TextView
-                        android:id="@+id/textView6"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/montserrat_semibold"
-                        android:paddingLeft="12dp"
-                        android:paddingTop="25dp"
-                        android:text="Rohan Perera"
-                        android:textSize="20sp" />
-
-                    <TextView
-                        android:id="@+id/textView4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/montserrat_medium"
-                        android:paddingLeft="12dp"
-                        android:paddingTop="10dp"
-                        android:paddingRight="12dp"
-                        android:paddingBottom="10dp"
-                        android:text="Friendly driver with 5+ years of experience. Knows all the best local spots." />
-
-                    <Button
-                        android:id="@+id/button6"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="12dp"
-                        android:layout_marginRight="12dp"
-                        android:paddingTop="6dp"
-                        android:text="Select"
-                        android:textColorLink="#2342FF" />
-                </LinearLayout>
-
-            </LinearLayout>
-
-
-            <!-- END: New Card with Picture and Name -->
+            <!-- Add more <include> tags as needed for more placeholders -->
+            <!-- Example for a fourth card -->
+            <include
+                android:id="@+id/driverCard4"
+                layout="@layout/content_card1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/driverCard3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -131,7 +116,9 @@
         android:id="@+id/navigation_bar_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/scrollView5">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <include layout="@layout/navigation_bar" />
 
