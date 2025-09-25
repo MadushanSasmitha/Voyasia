@@ -9,9 +9,11 @@
         android:id="@+id/imageView3"
         android:layout_width="605dp"
         android:layout_height="896dp"
-        app:srcCompat="@drawable/card_3_page_0001"
-        tools:layout_editor_absoluteX="-97dp"
-        tools:layout_editor_absoluteY="-129dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/card_3_page_0001" />
 
     <Button
         android:id="@+id/button2"
@@ -19,6 +21,10 @@
         android:layout_height="60dp"
         android:backgroundTint="#0182C4"
         android:text="Create My Plan"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="635dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.95" />
 </androidx.constraintlayout.widget.ConstraintLayout>

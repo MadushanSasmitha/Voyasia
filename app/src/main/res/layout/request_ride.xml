@@ -7,8 +7,13 @@
     android:background="#f9f2df">
 
     <ScrollView
+        android:id="@+id/scrollView3"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -43,8 +48,40 @@
                 android:id="@+id/constraintLayout"
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
+                android:layout_marginTop="1dp"
                 android:background="#FFFFFF"
-                tools:layout_editor_absoluteY="431dp">
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mapView">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textInputEditText"
+                    android:layout_width="377dp"
+                    android:layout_height="47dp"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="38dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="14dp"
+                    android:hint="Pickup Location"
+                    app:layout_constraintBottom_toTopOf="@+id/editText"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editText"
+                    android:layout_width="377dp"
+                    android:layout_height="47dp"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="29dp"
+                    android:hint="Drop-off Location"
+                    app:layout_constraintBottom_toTopOf="@+id/textView7"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textInputEditText" />
 
                 <TextView
                     android:id="@+id/textView7"
@@ -104,35 +141,18 @@
                     tools:layout_editor_absoluteX="55dp"
                     tools:layout_editor_absoluteY="247dp" />
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/textInputEditText"
-                    android:layout_width="377dp"
-                    android:layout_height="47dp"
-                    android:layout_marginStart="18dp"
-                    android:layout_marginTop="38dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginBottom="14dp"
-                    android:hint="Pickup Location"
-                    app:layout_constraintBottom_toTopOf="@+id/editText"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/editText"
-                    android:layout_width="377dp"
-                    android:layout_height="47dp"
-                    android:layout_marginStart="18dp"
-                    android:layout_marginTop="14dp"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginBottom="29dp"
-                    android:hint="Drop-off Location"
-                    app:layout_constraintBottom_toTopOf="@+id/textView7"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textInputEditText" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/navigation_bar_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/scrollView3">
+
+        <include layout="@layout/navigation_bar" />
+
+    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

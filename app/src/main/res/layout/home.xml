@@ -8,6 +8,7 @@
     android:backgroundTint="#f9f2df">
 
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -55,7 +56,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imageButton9"
                 app:layout_constraintTop_toBottomOf="@+id/searchView2"
-                app:srcCompat="@drawable/rentatuk" />
+                app:srcCompat="@drawable/rentatuk"
+                tools:ignore="SpeakableTextPresentCheck" />
 
             <ImageButton
                 android:id="@+id/imageButton9"
@@ -69,7 +71,8 @@
                 app:layout_constraintEnd_toStartOf="@+id/imageButton7"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/searchView2"
-                app:srcCompat="@drawable/book_hotel" />
+                app:srcCompat="@drawable/book_hotel"
+                tools:ignore="SpeakableTextPresentCheck" />
 
             <ImageButton
                 android:id="@+id/imageButton10"
@@ -81,7 +84,8 @@
                 app:layout_constraintEnd_toStartOf="@+id/imageButton11"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageButton9"
-                app:srcCompat="@drawable/eventexplore" />
+                app:srcCompat="@drawable/eventexplore"
+                tools:ignore="SpeakableTextPresentCheck" />
 
             <ImageButton
                 android:id="@+id/imageButton11"
@@ -93,7 +97,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imageButton10"
                 app:layout_constraintTop_toBottomOf="@+id/imageButton7"
-                app:srcCompat="@drawable/guidefind" />
+                app:srcCompat="@drawable/guidefind"
+                tools:ignore="SpeakableTextPresentCheck" />
 
             <SearchView
                 android:id="@+id/searchView2"
@@ -118,6 +123,7 @@
                 android:text="Suggested Destinations"
                 android:textSize="20sp"
                 android:textStyle="bold|italic"
+                android:visibility="visible"
                 app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -127,6 +133,7 @@
                 android:id="@+id/constraintLayout2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:visibility="visible"
                 app:layout_constraintTop_toBottomOf="@+id/textView5"
                 tools:layout_editor_absoluteX="-31dp">
 
@@ -154,14 +161,24 @@
                         android:layout_weight="1"
                         app:srcCompat="@drawable/sigiriya" />
                 </LinearLayout>
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <!-- END: New Card with Picture and Name -->
 
-
-
+            <!-- Navigation Bar Included at the Bottom -->
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/navigation_bar_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/scrollView2">
+
+        <include layout="@layout/navigation_bar" />
+
+    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
