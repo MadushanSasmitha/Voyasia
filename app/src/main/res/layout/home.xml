@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:backgroundTint="#f9f2df">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:srcCompat="@drawable/voyasia_logo"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:text="Hello...!"
+                android:textSize="48sp"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="116dp" />
+
+            <SearchView
+                android:layout_width="350dp"
+                android:layout_height="50dp"
+                android:background="#FDFDFD"
+                android:backgroundTint="#FFFFFF"
+                tools:layout_editor_absoluteX="30dp"
+                tools:layout_editor_absoluteY="189dp" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="150dp"
+                android:layout_height="125dp"
+                android:background="#B9B9B9"
+                android:clickable="true"
+                tools:layout_editor_absoluteX="222dp"
+                tools:layout_editor_absoluteY="267dp" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="150dp"
+                android:layout_height="125dp"
+                android:background="#B9B9B9"
+                android:clickable="true"
+                tools:layout_editor_absoluteX="40dp"
+                tools:layout_editor_absoluteY="267dp" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="150dp"
+                android:layout_height="125dp"
+                android:background="#B9B9B9"
+                android:clickable="true"
+                tools:layout_editor_absoluteX="40dp"
+                tools:layout_editor_absoluteY="422dp" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="150dp"
+                android:layout_height="125dp"
+                android:background="#B9B9B9"
+                android:clickable="true"
+                tools:layout_editor_absoluteX="222dp"
+                tools:layout_editor_absoluteY="422dp" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Suggested Destinations"
+                android:textSize="20sp"
+                android:textStyle="bold|italic"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="570dp" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/personCard"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView5">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/personImageView"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        tools:srcCompat="@tools:sample/avatars" /> <!-- Placeholder, replace with your image -->
+
+                    <TextView
+                        android:id="@+id/personNameTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="Sigiriya"
+                        android:textAppearance="?attr/textAppearanceHeadline6"
+                        app:layout_constraintBottom_toBottomOf="@+id/personImageView"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/personImageView"
+                        app:layout_constraintTop_toTopOf="@+id/personImageView" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+            <!-- END: New Card with Picture and Name -->
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

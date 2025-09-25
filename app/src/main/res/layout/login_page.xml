@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:backgroundTint="#F8F1DD">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="159dp"
+        android:layout_height="150dp"
+        app:srcCompat="@drawable/voyasia_logo"
+        tools:layout_editor_absoluteX="126dp"
+        tools:layout_editor_absoluteY="27dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create an Account"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        tools:layout_editor_absoluteX="114dp"
+        tools:layout_editor_absoluteY="201dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Your E-mail to sign up for this app"
+        tools:layout_editor_absoluteX="82dp"
+        tools:layout_editor_absoluteY="231dp" />
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress"
+        android:layout_width="284dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        tools:layout_editor_absoluteX="63dp"
+        tools:layout_editor_absoluteY="267dp" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="271dp"
+        android:layout_height="47dp"
+        android:backgroundTint="#0B0707"
+        android:text="Create My Plan"
+        tools:layout_editor_absoluteX="70dp"
+        tools:layout_editor_absoluteY="310dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
