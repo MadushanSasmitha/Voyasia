@@ -25,7 +25,7 @@
                 android:id="@+id/hotel_card_image"
                 android:layout_width="120dp"
                 android:layout_height="100dp"
-                android:contentDescription="Hotel Image"
+                android:contentDescription="@string/hotel_image"
                 android:scaleType="centerCrop"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
