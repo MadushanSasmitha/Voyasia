@@ -7,7 +7,7 @@
     android:background="#D4D5D5">
 
     <ImageButton
-        android:id="@+id/imageButton5"
+        android:id="@+id/nav_home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -15,7 +15,7 @@
         tools:ignore="ContentDescription,SpeakableTextPresentCheck,ImageContrastCheck" />
 
     <ImageButton
-        android:id="@+id/imageButton4"
+        android:id="@+id/nav_hotels"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -23,7 +23,7 @@
         tools:ignore="ContentDescription,SpeakableTextPresentCheck,ImageContrastCheck" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/nav_ride"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -31,7 +31,7 @@
         tools:ignore="ContentDescription,SpeakableTextPresentCheck,ImageContrastCheck" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/nav_planner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -39,7 +39,7 @@
         tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/nav_profile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
