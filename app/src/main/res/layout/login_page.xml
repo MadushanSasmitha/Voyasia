@@ -4,49 +4,175 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#000000"
-    android:backgroundTint="#F8F1DD">
+    android:background="#F8F1DD"
+    android:paddingStart="32dp"
+    android:paddingEnd="32dp"
+    tools:context=".LoginActivity"
+    tools:ignore="ExtraText"> <!-- Optional: if you have a LoginActivity -->
 
     <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="159dp"
+        android:id="@+id/login_logo"
+        android:layout_width="150dp"
         android:layout_height="150dp"
-        app:srcCompat="@drawable/voyasia_logo"
-        tools:layout_editor_absoluteX="126dp"
-        tools:layout_editor_absoluteY="27dp" />
+        android:contentDescription="@string/app_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.074"
+        app:srcCompat="@drawable/voyasia_logo" />
+
+    <!-- Or "Login to Your Account" --><![CDATA[
+    android:textAppearance="?attr/textAppearanceHeadline5"
+    android:textColor="?android:attr/textColorPrimary"
+    app:layout_constraintTop_toBottomOf="@+id/login_logo"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent" />
+
+    ]]><!-- To keep subtitle from being too wide -->
+
+    <!-- Email Input -->
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/login_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Create an Account"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        tools:layout_editor_absoluteX="114dp"
-        tools:layout_editor_absoluteY="201dp" />
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="500dp"
+        android:text="@string/welcome_back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_logo" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/login_subtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="248dp"
+        android:text="@string/enter_your_credentials_to_continue"
+        android:textAlignment="center"
+        android:textAppearance="?attr/textAppearanceBody1"
+        android:textColor="?android:attr/textColorSecondary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_title"
+        app:layout_constraintVertical_bias="0.047"
+        app:layout_constraintWidth_max="300dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/email_text_input_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="@string/email_address"
+        app:layout_constraintBottom_toTopOf="@+id/password_text_input_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_subtitle">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_text_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:maxLines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Password Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/password_text_input_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email_text_input_layout"
+        app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_text_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:maxLines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Assuming you want a black button --><![CDATA[
+    app:layout_constraintTop_toBottomOf="@+id/forgot_password_link"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+
+
+
+
+    ]]>
+
+    <TextView
+        android:id="@+id/forgot_password_link"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Enter Your E-mail to sign up for this app"
-        tools:layout_editor_absoluteX="82dp"
-        tools:layout_editor_absoluteY="231dp" />
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="8dp"
+        android:padding="8dp"
+        android:text="@string/forgot_password"
+        android:textColor="?attr/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password_text_input_layout"
+        app:layout_constraintVertical_bias="0.023" />
 
-    <EditText
-        android:id="@+id/editTextTextEmailAddress"
-        android:layout_width="284dp"
-        android:layout_height="43dp"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        tools:layout_editor_absoluteX="63dp"
-        tools:layout_editor_absoluteY="267dp" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/login_button"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/black"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:text="@string/login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/forgot_password_link" />
 
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="271dp"
-        android:layout_height="47dp"
-        android:backgroundTint="#0B0707"
-        android:text="Create My Plan"
-        tools:layout_editor_absoluteX="70dp"
-        tools:layout_editor_absoluteY="310dp" />
+    <LinearLayout
+        android:id="@+id/signup_prompt_layout"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login_button"> <!-- Keep it below login button, not strictly at bottom -->
+
+        <TextView
+            android:id="@+id/no_account_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/don_t_have_an_account"
+            android:textColor="?android:attr/textColorSecondary" />
+
+        <TextView
+            android:id="@+id/sign_up_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_up"
+            android:textColor="?attr/colorPrimary"
+            android:textStyle="bold" />
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+

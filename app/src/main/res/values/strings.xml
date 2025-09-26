@@ -27,4 +27,20 @@
     <string name="booking_confirmed">Booking Confirmed</string>
     <string name="back_to_home">Back to Home</string>
     <string name="view_booking">View Booking</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone</string>
+    <string name="location">Location</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="logout">Logout</string>
+    <string name="my_profile">My Profile</string>
+    <string name="driver_image">Driver Image</string>
+    <string name="app_logo">App Logo</string>
+    <string name="welcome_back">Welcome Back!</string>
+    <string name="login">Login</string>
+    <string name="enter_your_credentials_to_continue">Enter your credentials to continue</string>
+    <string name="email_address">Email Address</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="sign_up">Sign Up</string>
 </resources>
