@@ -17,4 +17,14 @@
     <string name="get_started">Get Started</string>
     <string name="next">Next</string>
     <string name="create_my_plan">Create My Plan</string>
+    <string name="write_down_your_plans">Write down your plans</string>
+    <string name="day_3_sigiriya">Day 3: Sigiriya</string>
+    <string name="day_2_kandy">Day 2: Kandy</string>
+    <string name="day_1_colombo">Day 1: Colombo</string>
+    <string name="itinerary_planner">Itinerary Planner</string>
+    <string name="your_booking_is_confirmed">Your booking is confirmed!</string>
+    <string name="you_re_all_set_for_your_adventure_in_sri_lanka_here_s_a_summary_of_your_booking">You\'re all set for your adventure in Sri Lanka. Here\'s a summary of your booking:</string>
+    <string name="booking_confirmed">Booking Confirmed</string>
+    <string name="back_to_home">Back to Home</string>
+    <string name="view_booking">View Booking</string>
 </resources>
