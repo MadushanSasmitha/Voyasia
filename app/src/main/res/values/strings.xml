@@ -3,4 +3,18 @@
     <string name="book_hotels">Book Hotels</string>
     <string name="suggested_hotels">Suggested Hotels</string>
     <string name="hotel_image">Hotel Image</string>
+    <string name="tuk_drivers">Tuk Drivers</string>
+    <string name="top_rated_drivers">Top Rated Drivers</string>
+    <string name="estimated_arrival">Estimated Arrival</string>
+    <string name="_1500">1500/=</string>
+    <string name="estimated_fare">Estimated Fare</string>
+    <string name="drop_off_location">Drop-off Location</string>
+    <string name="pickup_location">Pickup Location</string>
+    <string name="_18_00">18:00</string>
+    <string name="request_ride">Request Ride</string>
+    <string name="hello">Hello...!</string>
+    <string name="suggested_destinations">Suggested Destinations</string>
+    <string name="get_started">Get Started</string>
+    <string name="next">Next</string>
+    <string name="create_my_plan">Create My Plan</string>
 </resources>

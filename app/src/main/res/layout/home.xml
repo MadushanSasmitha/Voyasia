@@ -27,7 +27,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/voyasia_logo" />
+                app:srcCompat="@drawable/voyasia_logo"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/textView3"
@@ -37,7 +38,7 @@
                 android:layout_marginEnd="224dp"
                 android:layout_marginBottom="9dp"
                 android:fontFamily="sans-serif-black"
-                android:text="Hello...!"
+                android:text="@string/hello"
                 android:textSize="48sp"
                 app:layout_constraintBottom_toTopOf="@+id/searchView2"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -57,7 +58,7 @@
                 app:layout_constraintStart_toEndOf="@+id/imageButton9"
                 app:layout_constraintTop_toBottomOf="@+id/searchView2"
                 app:srcCompat="@drawable/rentatuk"
-                tools:ignore="SpeakableTextPresentCheck" />
+                tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
 
             <ImageButton
                 android:id="@+id/imageButton9"
@@ -72,7 +73,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/searchView2"
                 app:srcCompat="@drawable/book_hotel"
-                tools:ignore="SpeakableTextPresentCheck" />
+                tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
 
             <ImageButton
                 android:id="@+id/imageButton10"
@@ -85,7 +86,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageButton9"
                 app:srcCompat="@drawable/eventexplore"
-                tools:ignore="SpeakableTextPresentCheck" />
+                tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
 
             <ImageButton
                 android:id="@+id/imageButton11"
@@ -98,7 +99,7 @@
                 app:layout_constraintStart_toEndOf="@+id/imageButton10"
                 app:layout_constraintTop_toBottomOf="@+id/imageButton7"
                 app:srcCompat="@drawable/guidefind"
-                tools:ignore="SpeakableTextPresentCheck" />
+                tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
 
             <SearchView
                 android:id="@+id/searchView2"
@@ -120,7 +121,7 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="25dp"
                 android:layout_marginEnd="185dp"
-                android:text="Suggested Destinations"
+                android:text="@string/suggested_destinations"
                 android:textSize="20sp"
                 android:textStyle="bold|italic"
                 android:visibility="visible"
@@ -152,14 +153,16 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        app:srcCompat="@drawable/galle" />
+                        app:srcCompat="@drawable/galle"
+                        tools:ignore="ContentDescription" />
 
                     <ImageView
                         android:id="@+id/imageView14"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        app:srcCompat="@drawable/sigiriya" />
+                        app:srcCompat="@drawable/sigiriya"
+                        tools:ignore="ContentDescription,ImageContrastCheck" />
                 </LinearLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>

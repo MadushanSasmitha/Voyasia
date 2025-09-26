@@ -63,12 +63,12 @@
                     android:layout_marginStart="18dp"
                     android:layout_marginTop="38dp"
                     android:layout_marginEnd="16dp"
-                    android:hint="Pickup Location"
+                    android:hint="@string/pickup_location"
                     app:layout_constraintBottom_toTopOf="@+id/Textinput2"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/Textinput2"
@@ -77,12 +77,12 @@
                     android:layout_marginStart="18dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="29dp"
-                    android:hint="Drop-off Location"
+                    android:hint="@string/drop_off_location"
                     app:layout_constraintBottom_toTopOf="@+id/textView7"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textInput1"
-                    tools:ignore="TouchTargetSizeCheck" />
+                    tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
                 <TextView
                     android:id="@+id/textView7"
@@ -92,7 +92,7 @@
                     android:layout_marginEnd="272dp"
                     android:layout_marginBottom="8dp"
                     android:fontFamily="@font/montserrat_medium"
-                    android:text="Estimated Fare"
+                    android:text="@string/estimated_fare"
                     app:layout_constraintBottom_toTopOf="@+id/textView8"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -106,7 +106,7 @@
                     android:layout_marginTop="29dp"
                     android:layout_marginEnd="37dp"
                     android:fontFamily="@font/montserrat_semibold"
-                    android:text="1500/="
+                    android:text="@string/_1500"
                     app:layout_constraintBottom_toTopOf="@+id/textView11"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/textView7"
@@ -120,11 +120,12 @@
                     android:layout_marginEnd="259dp"
                     android:layout_marginBottom="21dp"
                     android:fontFamily="@font/montserrat_medium"
-                    android:text="Estimated Arrival"
+                    android:text="@string/estimated_arrival"
                     app:layout_constraintBottom_toTopOf="@+id/button7"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView7" />
+                    app:layout_constraintTop_toBottomOf="@+id/textView7"
+                    tools:ignore="TextContrastCheck" />
 
                 <TextView
                     android:id="@+id/textView11"
@@ -134,7 +135,7 @@
                     android:layout_marginEnd="36dp"
                     android:layout_marginBottom="30dp"
                     android:fontFamily="@font/montserrat_semibold"
-                    android:text="18:00"
+                    android:text="@string/_18_00"
                     app:layout_constraintBottom_toTopOf="@+id/button7"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/textView8"
@@ -147,7 +148,7 @@
                     android:layout_marginStart="55dp"
                     android:layout_marginTop="17dp"
                     android:layout_marginEnd="55dp"
-                    android:text="Request Ride"
+                    android:text="@string/request_ride"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"

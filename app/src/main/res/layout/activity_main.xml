@@ -17,19 +17,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.751"
-        app:srcCompat="@drawable/card_1_page_0001" />
+        app:srcCompat="@drawable/card_1_page_0001"
+        tools:ignore="ContentDescription,VisualLintBounds" />
 
     <Button
         android:id="@+id/button"
-        android:layout_width="380dp"
+        android:layout_width="320dp"
         android:layout_height="60dp"
         android:backgroundTint="#0182C4"
-        android:text="Get Started"
+        android:text="@string/get_started"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.947" />
+        app:layout_constraintVertical_bias="0.947"
+        tools:ignore="TextContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
