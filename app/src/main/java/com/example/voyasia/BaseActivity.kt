@@ -3,9 +3,7 @@ package com.example.voyasia
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import android.widget.ImageButton
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.ads.mediationtestsuite.activities.HomeActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView // If using BottomNavigationView
@@ -42,12 +40,9 @@ abstract class BaseActivity : AppCompatActivity() {
         navProfileButton = findViewById(R.id.nav_profile)
 
         navHomeButton?.setOnClickListener {
-            if (this !is HomeActivity) { // Don't re-navigate if already on the page
-                startActivity(Intent(this, HomeActivity::class.java).apply {
-                    flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
-                })
-                // finish() // Optional: finish current activity
-            }
+            startActivity(Intent(this, HomeActivity::class.java).apply {
+                flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
+            })
         }
 
         navHotelsButton?.setOnClickListener {
@@ -135,20 +130,5 @@ abstract class BaseActivity : AppCompatActivity() {
         }
     }
 
-    // Example for BottomNavigationView highlighting
-    // protected open fun getNavigationMenuItemId(): Int = 0 // Override in subclasses
-    // private fun updateBottomNavigationState() {
-    //     val menuItemId = getNavigationMenuItemId()
-    //     if (menuItemId != 0) {
-    //         bottomNavigationView?.selectedItemId = menuItemId
-    //     }
-    // }
-
-    // It's good practice to also handle onResume if you want to ensure the nav bar state
-    // is correct if the activity is paused and resumed.
-    // override fun onResume() {
-    //     super.onResume()
-    //     updateNavigationBarState() // Or updateBottomNavigationState()
-    // }
 }
 
